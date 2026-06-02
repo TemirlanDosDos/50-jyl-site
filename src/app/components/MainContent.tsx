@@ -9,7 +9,12 @@ export const MainContent: React.FC = () => {
   return (
     <div className="min-h-screen w-full relative z-10 pb-24 font-cormorant text-gray-200">
       {/* Background Vintage Texture */}
-      <div className="fixed inset-0 z-0 opacity-10 bg-[url('https://i.ibb.co.com/Ngn4x78S/picture.png"></div>
+      <div
+        className="fixed inset-0 z-0 opacity-10 bg-cover bg-center"
+        style={{
+          backgroundImage: "url('https://i.ibb.co/Ngn4x78S/picture.png')"
+        }}
+      ></div>
 
       <div className="max-w-3xl mx-auto px-6 pt-20 relative z-10">
         <motion.div 
