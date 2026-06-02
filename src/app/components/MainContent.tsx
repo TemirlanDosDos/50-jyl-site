@@ -120,7 +120,7 @@ export const MainContent: React.FC = () => {
               Жауабыңызды күтемін
             </h2>
             <p className="text-xl text-gray-400 font-cormorant italic">
-              Мерейтойға келетініңізді раст��уыңызды сұраймын
+              Мерейтойға келетініңізді растауыңызды сұраймыз
             </p>
           </div>
 
