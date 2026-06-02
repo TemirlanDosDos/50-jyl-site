@@ -30,7 +30,7 @@ export const StartScreen: React.FC<StartScreenProps> = ({ onOpen }) => {
       {/* Background Vintage Image */}
       <div 
         className="absolute inset-0 z-0 opacity-40 bg-cover bg-center grayscale mix-blend-overlay"
-        style={{ backgroundImage: 'url("https://i.ibb.co.com/Ngn4x78S/picture.png")' }}
+        style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1623910270913-3e0294a1c765?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyZXRybyUyMHZocyUyMGFlc3RoZXRpY3xlbnwxfHx8fDE3ODA0Mjc3MDJ8MA&ixlib=rb-4.1.0&q=80&w=1080")' }}
       ></div>
 
       {/* VCR UI overlays */}
