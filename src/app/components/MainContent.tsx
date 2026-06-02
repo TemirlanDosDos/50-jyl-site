@@ -59,7 +59,7 @@ export const MainContent: React.FC = () => {
             <p className="text-xl text-gray-300">Деркул ПДП2, Абылай хан 113</p>
             <p className="text-xl text-gray-300">"BAQ Saray" мейрамханасы</p>
             <a 
-              href="https://2gis.kz/" 
+              href="https://go.2gis.com/GpPSM"
               target="_blank" 
               rel="noopener noreferrer"
               className="mt-6 inline-flex items-center gap-2 border border-white/30 px-4 py-2 text-gray-300 hover:text-white hover:border-white/60 transition-colors bg-white/5"

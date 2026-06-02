@@ -34,8 +34,8 @@ export const RsvpForm: React.FC = () => {
         2. Message @userinfobot to get your CHAT_ID.
         3. Replace below:
       */
-      const BOT_TOKEN = "YOUR_BOT_TOKEN_HERE";
-      const CHAT_ID = "YOUR_CHAT_ID_HERE";
+      const BOT_TOKEN = "8991359340:AAHAmWn-4tsuHZSLuI0OZj1NwFNpfPqEjWM";
+      const CHAT_ID = "8765518150";
       
       const messageText = `
 🎉 Жаңа жауап (Мерейтой):
