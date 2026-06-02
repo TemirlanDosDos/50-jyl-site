@@ -1,0 +1,121 @@
+@keyframes crtFlicker {
+  0% { opacity: 0.95; }
+  5% { opacity: 0.85; }
+  10% { opacity: 0.95; }
+  15% { opacity: 1; }
+  100% { opacity: 1; }
+}
+
+@keyframes scanline {
+  0% { transform: translateY(-100vh); }
+  100% { transform: translateY(100vh); }
+}
+
+@keyframes vhsTracking {
+  0% { transform: skewX(0); }
+  2% { transform: skewX(1deg); }
+  4% { transform: skewX(-1deg); }
+  6% { transform: skewX(0); }
+  100% { transform: skewX(0); }
+}
+
+.crt-effect {
+  position: relative;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.crt-effect::before {
+  content: " ";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), 
+              linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+  z-index: 50;
+  background-size: 100% 4px, 4px 100%;
+  pointer-events: none;
+}
+
+.crt-effect::after {
+  content: " ";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: radial-gradient(circle, rgba(0,0,0,0) 60%, rgba(0,0,0,0.8) 100%);
+  z-index: 49;
+  pointer-events: none;
+}
+
+.scanline {
+  width: 100%;
+  height: 50px;
+  background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0) 100%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 48;
+  opacity: 0.6;
+  animation: scanline 8s linear infinite;
+  pointer-events: none;
+}
+
+.vhs-text {
+  font-family: 'VT323', monospace;
+  text-transform: uppercase;
+  color: #fff;
+  text-shadow: 2px 0px 1px rgba(0, 255, 255, 0.7), -2px 0px 1px rgba(255, 0, 0, 0.7);
+  animation: crtFlicker 4s infinite, vhsTracking 12s infinite;
+}
+
+.font-vt323 {
+  font-family: 'VT323', monospace;
+}
+
+.font-cormorant {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.vhs-button {
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  font-family: 'VT323', monospace;
+  font-size: 1.5rem;
+  padding: 0.5rem 1.5rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  text-shadow: 2px 0px 1px rgba(0, 255, 255, 0.7), -2px 0px 1px rgba(255, 0, 0, 0.7);
+  box-shadow: 0 0 10px rgba(255,255,255,0.2), inset 0 0 10px rgba(255,255,255,0.2);
+}
+
+.vhs-button:hover {
+  background: #fff;
+  color: #000;
+  text-shadow: none;
+  box-shadow: 0 0 20px rgba(255,255,255,0.5);
+}
+
+.vhs-button:active {
+  transform: scale(0.95);
+}
+
+.tape-noise {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 47;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  opacity: 0.05;
+}
